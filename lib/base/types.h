@@ -1,5 +1,5 @@
-#ifndef _OS_TYPES_INCLUDED_H_
-#define _OS_TYPES_INCLUDED_H_
+#ifndef __OS_LIB_BASE_TYPES_INCLUDED_H__
+#define __OS_LIB_BASE_TYPES_INCLUDED_H__
 
 #ifdef _USE_STDINT_H
   
@@ -24,4 +24,4 @@ typedef unsigned int uint32_t;
 
 #endif
 
-#endif // _OS_TYPES_INCLUDED_H
+#endif // __OS_LIB_BASE_TYPES_INCLUDED_H__

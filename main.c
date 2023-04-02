@@ -1,4 +1,4 @@
-#include "terminal.h"
+#include "os.h"
 
 int main(void)
 {

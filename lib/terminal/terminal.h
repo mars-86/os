@@ -1,5 +1,5 @@
-#ifndef _TERMINAL_INCLUDED_H_
-#define _TERMINAL_INCLUDED_H_
+#ifndef __OS_LIB_TERMINAL_INCLUDED_H__
+#define __OS_LIB_TERMINAL_INCLUDED_H__
 
 #include "terminal_constants.h"
 #include "terminal_cmd.h"
@@ -71,4 +71,4 @@
 
 #define TERM_SET_SIZE(rows, cols) __terminal_cmd_size(rows, cols)
 
-#endif /* _TERMINAL_INCLUDED_H_ */
+#endif /* __OS_LIB_TERMINAL_INCLUDED_H__ */

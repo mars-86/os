@@ -1,8 +1,8 @@
-#include "error.h"
+#include "system.h"
 #include <stdio.h>
 #include <windows.h>
 
-void perror_win(const char *msg)
+void system_error(const char *msg)
 {
         WCHAR *buff;
         FormatMessageW(

@@ -1,26 +1,16 @@
-#ifndef _TERMINAL_CMD_INCLUDED_H_
-#define _TERMINAL_CMD_INCLUDED_H_
+#ifndef __OS_LIB_TERMINAL_CMD_INCLUDED_H__
+#define __OS_LIB_TERMINAL_CMD_INCLUDED_H__
 
-#ifdef _WIN32
-#include <io.h>
-#else
-#include <unistd.h>
-#endif
+#include <stdio.h>
+#include "../base/inout.h"
+
 #include <string.h>
-
-#ifdef _WIN32
-    int (*write_cmd)(int, const void*, unsigned int) = _write;
-#else
-    ssize_t (*write_cmd)(int, const void*, size_t) = write;
-#endif
-
-const int STDOUT = 1;
 
 // #define __terminal_put_cmd(fmt, ...) (wprintf(L"%c"fmt, '\x1B', __VA_ARGS__))
 #define __terminal_put_cmd(...) \
     do { \
         const char *cmd = "\x1B"__VA_ARGS__; \
-        write_cmd(STDOUT, cmd, strlen(cmd)); \
+        os_write(STDOUT_FILENO, cmd, strlen(cmd)); \
     } while (0);
 
 /* CURSOR SIMPLE POSITIONING */
@@ -116,4 +106,4 @@ const int STDOUT = 1;
 #define __terminal_cmd_f11 __terminal_put_cmd("[23")
 #define __terminal_cmd_f12 __terminal_put_cmd("[24")
 
-#endif /* _TERMINAL_CMD_INCLUDED_H_ */
+#endif /* __OS_LIB_TERMINAL_CMD_INCLUDED_H__ */
