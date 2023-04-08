@@ -3,7 +3,7 @@
 #ifdef __linux__
 
 #include <stdio.h>
-#include <sys/ioctl.h> //ioctl() and TIOCGWINSZ
+#include <sys/ioctl.h> // ioctl() and TIOCGWINSZ
 #include <unistd.h> // for STDOUT_FILENO
 
 struct winsize get_window_size(void);

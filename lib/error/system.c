@@ -1,6 +1,5 @@
-#include "system.h"
+#include "../lib.h"
 #include <stdio.h>
-#include <windows.h>
 
 void system_error(const char *msg)
 {

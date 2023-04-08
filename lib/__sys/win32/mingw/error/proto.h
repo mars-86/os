@@ -1,0 +1,7 @@
+#ifndef __OS_LIB_SYS_WIN32_MINGW_ERROR_PROTO_INCLUDED_H__
+#define __OS_LIB_SYS_WIN32_MINGW_ERROR_PROTO_INCLUDED_H__
+
+extern void __cdecl system_error(const char *msg)
+    __MINGW_ATTRIB_NONNULL(1) __MINGW_NOTHROW;
+
+#endif // __OS_LIB_SYS_WIN32_MINGW_ERROR_PROTO_INCLUDED_H__

@@ -2,17 +2,13 @@
 #define __OS_LIB_INCLUDED_H__
 
 #ifdef _WIN32
-// #define WINVER 0x0500
-#include "os/win32.h"
-#elif __linux__
-#include "os/x11.h"
-#endif // __linux__
+ #if defined __MINGW32__ || defined __MINGW64__
+  #include "__sys/win32/mingw/proto.h"
+ #else
 
-#undef NULL
-#ifdef __cplusplus
-#define NULL nullptr
+ #endif // __MINGW32__ || __MINGW64__
 #else
-#define NULL ((void*)0)
-#endif /* __cplusplus */
+ #include "__sys/linux/proto.h"
+#endif // _WIN32
 
 #endif /* __OS_LIB_INCLUDED_H__ */
