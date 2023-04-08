@@ -9,7 +9,7 @@ int main(void)
 
     HANDLE stdout_h = get_term_stdout_handle();
     set_term_out_cp(CP_UTF8);
-    set_term_mode(stdout_h, 0x007);
+    set_term_mode(stdout_h, ENABLE_PROCESSED_OUTPUT | ENABLE_VIRTUAL_TERMINAL_PROCESSING);
     set_term_font(stdout_h, L"Iosevka", 14);
 
     os_write(STDOUT_FILENO, sym, slen);
