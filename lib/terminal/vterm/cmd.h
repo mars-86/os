@@ -1,8 +1,8 @@
-#ifndef __OS_LIB_TERMINAL_CMD_INCLUDED_H__
-#define __OS_LIB_TERMINAL_CMD_INCLUDED_H__
+#ifndef __OS_LIB_TERMINAL_VTERM_CMD_INCLUDED_H__
+#define __OS_LIB_TERMINAL_VTERM_CMD_INCLUDED_H__
 
 #include <stdio.h>
-#include "../base/inout.h"
+#include "../../lib.h"
 
 #include <string.h>
 
@@ -106,4 +106,4 @@
 #define __terminal_cmd_f11 __terminal_put_cmd("[23")
 #define __terminal_cmd_f12 __terminal_put_cmd("[24")
 
-#endif /* __OS_LIB_TERMINAL_CMD_INCLUDED_H__ */
+#endif /* __OS_LIB_TERMINAL_VTERM_CMD_INCLUDED_H__ */

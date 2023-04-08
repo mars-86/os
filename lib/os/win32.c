@@ -1,5 +1,4 @@
-#include "win32.h"
-
+/*
 HANDLE _init_instance(ContainerSize* cs)
 {
     // Get console window handle
@@ -32,3 +31,4 @@ HANDLE _init_instance(ContainerSize* cs)
     // TODO - return display instance
     return stdh;
 }
+*/

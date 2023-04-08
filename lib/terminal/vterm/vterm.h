@@ -1,8 +1,8 @@
-#ifndef __OS_LIB_TERMINAL_INCLUDED_H__
-#define __OS_LIB_TERMINAL_INCLUDED_H__
+#ifndef __OS_LIB_TERMINAL_VTERM_INCLUDED_H__
+#define __OS_LIB_TERMINAL_VTERM_INCLUDED_H__
 
-#include "terminal_constants.h"
-#include "terminal_cmd.h"
+#include "constants.h"
+#include "cmd.h"
 
 /* CURSOR SIMPLE POSITIONING */
 
@@ -71,4 +71,4 @@
 
 #define TERM_SET_SIZE(rows, cols) __terminal_cmd_size(rows, cols)
 
-#endif /* __OS_LIB_TERMINAL_INCLUDED_H__ */
+#endif /* __OS_LIB_TERMINAL_VTERM_INCLUDED_H__ */

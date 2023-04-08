@@ -1,4 +1,4 @@
-#include "inout.h"
+#include "../lib.h"
 #include <io.h>
 
 int (*os_write)(int fd, const void *buf, unsigned int count) = _write;
