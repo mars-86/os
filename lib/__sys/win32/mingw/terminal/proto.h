@@ -10,7 +10,13 @@ extern void *__cdecl get_term_stdout_handle(void)
 extern int __cdecl get_term_buffer_info(void *handle, TerminalSize *ts)
     __MINGW_ATTRIB_NONNULL(1) __MINGW_ATTRIB_NONNULL(2) __MINGW_NOTHROW;
 
+unsigned int get_term_out_cp(void)
+    __MINGW_NOTHROW;
+
 extern int __cdecl get_term_mode(void *handle, unsigned long *mode)
+    __MINGW_ATTRIB_NONNULL(1) __MINGW_ATTRIB_NONNULL(2) __MINGW_NOTHROW;
+
+extern int __cdecl get_term_font(void *handle, CONSOLE_FONT_INFOEX *info)
     __MINGW_ATTRIB_NONNULL(1) __MINGW_ATTRIB_NONNULL(2) __MINGW_NOTHROW;
 
 extern int __cdecl set_term_out_cp(unsigned int code_page)

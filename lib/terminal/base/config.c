@@ -16,9 +16,19 @@ int get_term_buffer_info(void *handle, TerminalSize *ts)
     return status;
 }
 
+unsigned int get_term_out_cp(void)
+{
+    return GetConsoleOutputCP();
+}
+
 int get_term_mode(void *handle, unsigned long *mode)
 {
     return GetConsoleMode(handle, mode);
+}
+
+int get_term_font(void *handle, CONSOLE_FONT_INFOEX *info)
+{
+    return GetCurrentConsoleFontEx(handle, 0, &info);
 }
 
 int set_term_out_cp(unsigned int code_page)
@@ -39,7 +49,7 @@ int set_term_font(void *handle, const wchar_t *name, short size)
     info.FontWeight = FW_NORMAL;
     wcscpy(info.FaceName, name);
     
-    return SetCurrentConsoleFontEx(handle, 1, &info);
+    return SetCurrentConsoleFontEx(handle, 0, &info);
 }
 
 int set_term_cursor_info(void *handle, int visible, unsigned long size)
