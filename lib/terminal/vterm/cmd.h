@@ -2,7 +2,7 @@
 #define __OS_LIB_TERMINAL_VTERM_CMD_INCLUDED_H__
 
 #include <stdio.h>
-#include "../../base/inout.h"
+#include "../../lib.h"
 
 #include <string.h>
 

@@ -2,6 +2,7 @@
 #define __OS_LIB_SYS_WIN32_MINGW_TERMINAL_PROTO_INCLUDED_H__
 
 #include "../../../types.h"
+#include "../../../../terminal/vterm/vterm.h"
 
 extern void *__cdecl get_term_stdout_handle(void)
     __MINGW_NOTHROW;
