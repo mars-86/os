@@ -28,7 +28,7 @@ int get_term_mode(void *handle, unsigned long *mode)
 
 int get_term_font(void *handle, CONSOLE_FONT_INFOEX *info)
 {
-    return GetCurrentConsoleFontEx(handle, 0, &info);
+    return GetCurrentConsoleFontEx(handle, 0, info);
 }
 
 int set_term_out_cp(unsigned int code_page)
