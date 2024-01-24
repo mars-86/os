@@ -1,6 +1,12 @@
 #include "../lib.h"
-#include <io.h>
+#include <stdio.h>
 
-int (*os_write)(int fd, const void *buf, unsigned int count) = _write;
+#ifdef _WIN32
+long (*os_write)(int fd, const void* buf, size_t count) = _write;
+long (*os_read)(int fd, void* buf, size_t count) = _read;
 
-int (*os_read)(int fd, void *buf, unsigned int count) = _read;
+#else
+long (*os_write)(int fd, const void* buf, size_t count) = write;
+long (*os_read)(int fd, void* buf, size_t count) = read;
+
+#endif

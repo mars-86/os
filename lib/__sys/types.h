@@ -2,11 +2,11 @@
 #define __OS_LIB_SYS_TYPES_INCLUDED_H__
 
 #ifdef _USE_STDINT_H
-  
+
 #ifdef HAVE_STDINT_H
-  #include <stdint.h>
+#include <stdint.h>
 #else
-  #error intX_t definitions missing
+#error intX_t definitions missing
 #endif
 
 #else
@@ -31,13 +31,13 @@ typedef unsigned int uint32_t;
 // #define NULL ((void*)0)
 #endif /* __cplusplus */
 
-struct _TerminalSize {
+struct terminal_size {
     uint16_t row;
     uint16_t col;
     uint16_t row_max;
     uint16_t col_max;
 };
 
-typedef struct _TerminalSize TerminalSize;
+typedef struct terminal_size terminal_size_t;
 
 #endif // __OS_LIB_SYS_TYPES_INCLUDED_H__

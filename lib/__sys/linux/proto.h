@@ -5,8 +5,9 @@
 extern "C" {
 #endif /* __cplusplus */
 
-#include <unistd.h>
 #include "base/proto.h"
+#include "terminal/proto.h"
+#include <unistd.h>
 
 #ifdef __cplusplus
 }

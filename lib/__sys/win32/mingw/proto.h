@@ -5,10 +5,10 @@
 extern "C" {
 #endif /* __cplusplus */
 
-#include <windows.h>
 #include "base/proto.h"
 #include "error/proto.h"
 #include "terminal/proto.h"
+#include <windows.h>
 
 #ifdef __cplusplus
 }

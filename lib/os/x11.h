@@ -3,14 +3,10 @@
 
 #ifdef __linux__
 
+#include "../lib.h"
 #include <unistd.h>
-#include "../base/inout.h"
-#include "../base/platform.h"
-#include "../base/types.h"
-#include "../error/system.h"
-#include "../terminal/terminal.h"
 
-void* _init_instance(ContainerSize* cs);
+void* _init_instance(terminal_size_t* ts);
 
 #endif /* __linux__ */
 
